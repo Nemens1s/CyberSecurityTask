@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crypto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <section id="header"></section>
+    <section id="jumbotron">
+        <div class="positioner">
+            <textarea placeholder="Enter your data here..." id="data-input"></textarea>
+            <div id=buttons>
+                <input type="text" placeholder="Key" id="key">
+                <input type="button" value="OTP encrypt" onclick="document.getElementById('data-output').value = OTPencrypt(document.getElementById('data-input').value,document.getElementById('key').value)">
+                <input type="button" value="OTP decrypt" onclick="document.getElementById('data-output').value = OTPdecrypt(document.getElementById('data-input').value,document.getElementById('key').value)">
+            </div>
+            <textarea placeholder="Output..." readonly id="data-output"></textarea>
+        </div>
+    </section>
+    <section id="footer"></section>
+    <canvas id="bgcanvas"></canvas>
+    <!--<img id="background-lock" src="lock.png">-->
+</body>
+
+<script src="main.js"></script>
+
+</html>
